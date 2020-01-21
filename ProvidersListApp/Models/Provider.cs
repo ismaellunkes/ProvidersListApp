@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProvidersListApp.Models
@@ -9,6 +8,7 @@ namespace ProvidersListApp.Models
         [Required(ErrorMessage = "{0} required")]
         [Display(Name = "Data de Reg.:")]
         public DateTime DtTimeRegistry { get; set; }
+
         [Required(ErrorMessage = "{0} required")]
         [Display(Name = "Nascimento/Fundação:")]
         public DateTime DtBirthday { get; set; }

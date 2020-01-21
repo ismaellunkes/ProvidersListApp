@@ -15,10 +15,5 @@ namespace ProvidersListApp.Services
         {
             _context = context;
         }
-        /*public async Task<List<Phone>> FindListPhoneAsync(Provider provider)
-        {
-            return await _context.Phones.Where(Phone => Phone.PersonId = provider.Id).ToListAsync();
-        }*/
-
     }
 }

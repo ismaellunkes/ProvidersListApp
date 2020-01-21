@@ -7,6 +7,7 @@ namespace ProvidersListApp.Models
         public int Id { get; set; }
         public Person Person { get; set; }
         public int PersonId { get; set; }
+
         [Required(ErrorMessage = "{0} required")]
         [Display(Name = "Telefone:")]
         public string PhoneNumber { get; set; }

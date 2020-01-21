@@ -12,8 +12,6 @@ namespace ProvidersListApp.Services
     {
         private readonly ProvidersListAppContext _context;
 
-
-
         public ProviderService(ProvidersListAppContext context)
         {
             _context = context;
@@ -44,7 +42,6 @@ namespace ProvidersListApp.Services
             return await _context.Providers.OrderBy(Provider => Provider.DtTimeRegistry).ToListAsync();
         }
        
-
         public async Task InsertAsync(Provider obj, Company company)
         {
 

@@ -6,6 +6,7 @@ namespace ProvidersListApp.Models
     public abstract class Person
     {
         public int Id { get; set; }
+
         [Required(ErrorMessage = "{0} required")]
         [Display(Name = "Tipo Pessoa:")]
         public PersonType PersonType { get; set; }
