@@ -1,0 +1,49 @@
+﻿@model ProvidersListApp.Models.Provider
+@{
+    ViewData["Title"] = "Create";
+    /// Carregar os combobox de Enum
+    IEnumerable<SelectListItem> PersonsTypes = ProvidersListApp.Services.EnumServices.EnumToSelectList<PersonType>("U").OrderBy(x => x.Text);
+}
+
+<h4>Fornecedores</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Document01" class="control-label"></label>
+                <input asp-for="Document01" class="form-control" />
+                <span asp-validation-for="Document01" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DtBirthday" class="control-label"></label>
+                <input asp-for="DtBirthday" class="form-control" />
+                <span asp-validation-for="DtBirthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Document02" class="control-label"></label>
+                <input asp-for="Document02" class="form-control" />
+                <span asp-validation-for="Document02" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonType" class="control-label"></label>
+                <select asp-for="PersonType" asp-items="PersonsTypes" class="form-control"></select>
+                <span asp-validation-for="PersonType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
